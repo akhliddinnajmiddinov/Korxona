@@ -34,6 +34,5 @@ def GetListView(request, *args, **kwargs):
     ordered_products, needed_materials = get_products_and_materials(serializer.data['order'])
 
     materials_in_warehouse = get_materials(needed_materials)
-    print(materials_in_warehouse)
 
     return Response({'order': "dasd"})
