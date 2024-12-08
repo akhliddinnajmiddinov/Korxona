@@ -8,3 +8,7 @@ class Product_Materials(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     material = models.ForeignKey(Material, on_delete=models.CASCADE)
     quantity = models.FloatField()
+
+
+    def __str__(self):
+        return f'{self.product.name} & {self.material} : {self.quantity}'

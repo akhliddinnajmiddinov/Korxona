@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'material',
     'product',
     'product_material',
+    'warehouse',
     'main',
 ]
 
