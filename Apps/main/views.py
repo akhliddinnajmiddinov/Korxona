@@ -16,7 +16,7 @@ def GetListView(request, *args, **kwargs):
         "order": [
             {
                 "product_name": "Ko'ylak",
-                "product_qty": 20
+                "product_qty": 30
             },
             {
                 "product_name": "Shim",
