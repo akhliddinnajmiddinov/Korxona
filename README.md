@@ -1,7 +1,7 @@
 http://127.0.0.1:8000/api/
-Send post request with data to this url and it returns the response
+Send post request with body to this url and it returns the response
 
-Simple data example:
+Simple body example:
 {
     "order": [
         {
