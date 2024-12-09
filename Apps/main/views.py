@@ -28,13 +28,14 @@ def GetListView(request, *args, **kwargs):
     """
 
     # checking request.data is in valid json format like above
+    # print(request.data)
     serializer = RequestSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     
     ordered_products, needed_materials = get_products_and_materials(serializer.data['order'])
 
     materials_in_warehouse = get_materials(needed_materials)
-    print(json.dumps(materials_in_warehouse, indent=4))
+    # print(json.dumps(materials_in_warehouse, indent=4))
     res = get_needed_materials(ordered_products, materials_in_warehouse)
 
     return Response(res)
