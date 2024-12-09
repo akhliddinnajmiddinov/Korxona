@@ -92,7 +92,7 @@ def get_needed_materials(ordered_products: List[dict], materials_in_warehouse: d
             m_name = material.material.name
 
             # while quantity is positive and there are materials we need in warehouse
-            while materials_in_warehouse[m_name] and quantity:
+            while materials_in_warehouse[m_name] and quantity > 0:
                 # getting min between quantity and material quantity in the warehouse
                 mn_qty = min(quantity, materials_in_warehouse[m_name][-1]['remainder'])
                 quantity -= mn_qty
@@ -114,7 +114,7 @@ def get_needed_materials(ordered_products: List[dict], materials_in_warehouse: d
                     materials_in_warehouse[m_name].pop()
             
             # If there is some materials we need, we will add it to singe_res with None values
-            if quantity:
+            if quantity > 0:
                 single_res['product_materials'].append({
                     'warehouse_id': None,
                     'material_name': m_name.capitalize(),
