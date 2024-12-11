@@ -38,7 +38,7 @@ def get_materials(needed_materials: List[str]) -> dict[str, List[dict]]:
         This function collects all materials we need and returns it.
         Return format: 
         {
-            "ip": "mato": [
+            "mato": [
                 { "warehouse_id": 2, "remainder": 200.0, "price": 1600 },
                 { "warehouse_id": 1, "remainder": 12.0, "price": 1500 }
             ],
